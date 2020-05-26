@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use script";
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Counter Program
+    // This program will count from the lowest value to the highest value by a number of steps.  All three values will be
+    // given by the user
+    // CHALLENGE: Dummy proof that code!
+    //
+    // EXAMPLE RUN
+    // Please enter the start value: 2
+    // Please enter the end value: 9
+    // Please enter what to skip by: 3
+    // 2
+    // 5
+    // 8
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    let start = prompt("Enter the starting value:");
+    let end = prompt("Enter the terminating value:");
+    let step = prompt("Enter the step size:");
+
+    start = Number(start);
+    end = Number(end);
+    step = Number(step);
+
+    // ------ CHALLENGE CODE ----------
+    let isValid = true;
+    if(isNaN(start) || isNaN(end) || isNaN(step)) {
+        alert("Bad value detected");
+        isValid = false;
+    } else if(step === 0) {
+        alert("Infinite loop detected. Stopping program.");
+        isValid = false;
+    } else if( (step < 0 && start < end) || (step > 0 && end < start)) {
+        let temp = start;
+        start = end;
+        end = temp;
+    }
+    // --------------------------------
+
+    if(isValid) {     // CONDITION IS PART OF CHALLENGE CODE
+       let count = start;
+       while(count <= end) {
+           document.write(count + "<BR/>");
+           count += step;
+       }
+    }
+</script>
+</body>
+</html>

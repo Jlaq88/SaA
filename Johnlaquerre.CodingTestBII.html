@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coding Test</title>
+</head>
+<body>
+<script>
+    "use strict";
+    // Complete the following challenges to the best of your ability.  DO NOT CHANGE the code that is already given.
+
+    // Problem 1: Write a function on that takes in two numbers and returns the difference of the two numbers
+
+    function diff(one,two){
+        return one - two
+    }
+    // DO NOT ALTER
+    if(diff(2, 3) === -1 && diff(-1, 10) === -11 && diff(4, 1) === 3) {
+        document.write("PASSED<br/>");
+    } else {
+        document.write("failed...<br/>");
+    }
+
+    /* Problem 2:
+       Write a function acts like rolling a special die. Each of the six faces are either "Star", "Circle" or "Square".
+       Each type of face is equally probable (2 star faces, 2 circle faces, 2 square faces).
+       5 Marks
+    */
+    let star="Star";
+    let circle="Circle";
+    let square="Square";
+    function roll() {
+        let dice = Math.floor(Math.random() * 6) + 1;
+        if (dice === 1 || dice === 2) {
+            dice=square;
+        } else if (dice === 3 || dice === 4) {
+            dice=star;
+        } else if (dice === 5 || dice === 6) {
+            dice=circle;
+
+        }
+        return dice;
+    }
+
+
+    // DO NOT ALTER
+    let i = 0;
+    let passed = true;
+    let starCount = 0;
+    while(i < 100) {
+        let result = roll();
+        if (result !== "Star" && result !== "Circle" && result !== "Square") {
+            passed = false;
+            break;
+        } else if (result === "Star") {
+            starCount++;
+        }
+        i++;
+    }
+    if(passed) {
+        document.write("PASSED + " + starCount + "<br/>");
+    } else {
+        document.write("failed...<br/>");
+    }
+
+    let counter = 0;
+    while (counter<10){
+        if (counter= 1){
+            document.write("@....<br/>")
+        }
+        if (counter= 2){
+            document.write(".@...<br/>")
+        }
+        if (counter= 3){
+            document.write("..@..<br/>")
+        }
+        if (counter= 4){
+            document.write("...@.<br/>")
+        }
+        if (counter= 5){
+            document.write("....@<br/>")
+        }
+        if (counter= 6){
+            document.write("...@.<br/>")
+        }
+        if (counter= 7){
+            document.write("..@..<br/>")
+        }
+        if (counter= 8){
+            document.write(".@...<br/>")
+        }
+        if (counter= 9){
+            document.write("@....<br/>")
+        }
+        counter=counter+1
+    }
+    /*  Problem 3: Using one or more loops, write code that makes the following pattern
+        @....
+        .@...
+        ..@..
+        ...@.
+        ....@
+        ...@.
+        ..@..
+        .@...
+        @....
+
+        10 Marks
+     */
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doubles Game</title>
+</head>
+<body>
+<script>
+    "use strict";
+    /* This is a game of doubles.  If the user rolls a double (same number) with two dice, the user gains 5 points.
+     * If any other combination is rolled, the user loses 5 points.  The game will continue to be played until
+     * the user has 0 points or less, or if the user enters quit.  The user starts with 30 points.
+     *
+     */
+
+    //create a string variable that will indicate the option of quitting, the value should be 'no'
+    let quit = "no";
+    //create the score variable and set the value to 30
+    let score = 30;
+    //create a loop while score is more than 0 AND the user wants to keep playing
+    while(score > 0 && quit === "no") {
+        //create the two dice variables and set them to random values between 1 and 6
+        let dice1 = Math.floor(Math.random()*6) + 1;
+        let dice2 = Math.floor(Math.random()*6) + 1;
+        //print the values on the two dice
+        alert(`${dice1} and ${dice2}`);
+
+        //conditional statement: Win round
+        if(dice1 === dice2) {
+            alert("You win this round");
+            //add 5 points to the score
+            score += 5;
+        } else {
+            //conditional statement: Lose round
+            alert("You lose this round");
+            //subtract 5 points from the score
+            score -= 5;
+        }
+
+        //print out the users score
+        alert(`Your score is ${score}`);
+        //conditional statement - They lost the game and check if they want to play again.
+        if(score <= 0) {
+            //print out the option of quitting. The user will enter 'yes' to keep going and 'no' to stop.
+            let keepPlaying = prompt("You lose! Would you like to play again?!");
+            //If they want to play again
+            if(keepPlaying === "yes") {
+                // Set score back to 30
+                score = 30;
+            } else {
+                quit = "yes";
+            }
+        }
+        // End of Loop
+    }
+    //thank the user for playing
+    console.log("Thank you for playing");
+</script>
+</body>
+</html>

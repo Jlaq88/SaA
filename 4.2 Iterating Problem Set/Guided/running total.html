@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Running Total</title>
+</head>
+<body>
+<script>
+    "use script";
+    let numOne = 1;
+    let numTwo = 1;
+
+    // Create a variable called 'next', set it to 0.
+
+    let next = 0;
+    while (next <=50) {
+        // Print the first and second numbers of the sequence
+        console.log(numOne, numTwo);
+// Loop 30 times, output the result each iteration
+        numOne = numOne + numTwo;
+        numTwo = numOne + numTwo;
+        next = next + 1;
+    }
+    if (next>50){
+        console.log("Goodbye")
+    }
+
+</script>
+</body>
+</html>

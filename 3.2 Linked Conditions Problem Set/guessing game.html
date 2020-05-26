@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guessing Game</title>
+</head>
+<body>
+<script>
+    let mynumber = Math.floor((Math.random() * 100) + 1);
+
+    while (true) {
+        //your code
+        "use strict";
+        // This is the guess my number game
+        // You will hard code the computer with a number (any number you want)
+        // It will prompt the user for a guess (between 1 and 100)
+        // The user will win if they guess your number
+        // otherwise the user will lose.
+        // CHALLENGE: make the computer pick a random number between 1 and 100
+        // CHALLENGE: Handle bad input
+
+
+
+        // Create a variable called myNumber to store the magic number
+        let guess = prompt("What is the password");
+
+
+        // Convert the guessed value to a Number and store it back in 'guess'.  You will want to use the Number() function.
+        guess = Number(guess);
+        mynumber = Number(mynumber);
+
+        // Conditional 1: Check if the guess was too high
+        if (guess > mynumber) {
+            document.write("too high");
+            document.write("<br/>");
+
+        }
+        // Print an appropriate message for a guess that is too high
+
+        // Conditional 2: Check if the guess was too low
+        if (guess < mynumber) {
+            document.write("too low");
+            document.write("<br/>");
+        }
+
+        // Print an appropriate message for a guess that is too low
+
+        // Conditional 3: Check if the guess was correct
+        if (guess === mynumber) {
+            document.write("Correct now your in");
+            document.write("<br/>");
+        }
+        // Print an appropriate message for a guess that is correct
+    }
+</script>
+</body>
+</html>

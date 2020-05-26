@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Box Pattern Problem</title>
+</head>
+<body>
+<script>
+    "use strict";
+    /*
+    This problem requires you to get three values from the user: width, height and the character. The program will
+    then print a box with those dimensions using the given character.
+
+    EXAMPLE:
+    input: width = 5, height = 3, character = *
+
+    *****
+    *   *
+    *****
+     */
+    // Define the function 'printBox(width, height, char)
+    function printBox(width, height, char) {
+        let row = 0;
+        while(row < height) {
+            let col = 0;
+            while(col < width) {
+                if(col === 0 || col === width - 1) {
+                    document.write(char);
+                } else if(row === 0 || row === height - 1) {
+                    document.write(char);
+                } else {
+                    document.write("#"); // Space character
+                }
+                col++;  // col += 1   // col = col + 1
+            }
+            document.write("<br/>");
+            row++;
+        }
+    }
+    // Get the values from the user
+    let sizeX = prompt("Give the width");
+    let sizeY = prompt("Give the height");
+    let letter = prompt("What character do you want to use");
+    // Call printBox() using the correct values.
+    //printBox(sizeX, sizeY, letter);
+</script>
+</body>
+</html>

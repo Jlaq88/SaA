@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+    // Create a greeting function, called 'greeting', that prints out a welcome message
+    function greeting() {
+        document.write("Bonjour! <br/>");
+    }
+
+    // Call the greeting() function three times
+    greeting();
+    greeting();
+    greeting();
+
+    // Create a greeting function, called 'greetUser', that prints out a welcome message using the user's name
+    // the function should accept the parameter name.
+    function greetUser(user) {
+        document.write("Bonjour, "+ user + "! <br/>");
+    }
+
+    // Ask the user for their name and store it in a variable called name
+    let name = prompt("What is your name?")
+    // Call the greetUser(user) function three times
+    greetUser(name);
+    greetUser(name);
+    greetUser(name);
+</script>
+</body>
+</html>

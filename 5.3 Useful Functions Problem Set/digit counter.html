@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Digit Counter Problem</title>
+</head>
+<body>
+<script>
+    "use strict";
+    /* Write a function that takes an integer as an argument and returns the number of digits in the integer.*/
+
+    // Define the function 'countDigits'
+    function countDigits(number) {
+        let digits = 0;
+        while(number > 0) {
+            number = Math.floor(number / 10);
+            digits++;
+        }
+        return digits
+    }
+
+    // Get the value from the user
+    let num = Number(prompt("Please enter a number"));
+    // Output the result
+    document.write(`The number ${num} has ${countDigits(num)} digits`)
+</script>
+</body>
+</html>

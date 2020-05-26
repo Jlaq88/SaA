@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doubles Game</title>
+</head>
+<body>
+<script>
+    "use strict";
+    /* This is a game of doubles.  If the user rolls a double (same number) with two dice, the user gains 5 points.
+     * If any other combination is rolled, the user loses 5 points.  The game will continue to be played until
+     * the user has 0 points or less, or if the user enters quit.  The user starts with 30 points.
+     *
+     */
+    //create a string variable that will indicate the option of quitting, the value should be 'no'
+
+    //create the score variable and set the value to 30
+    let totalscore = 30;
+    //create a loop while score is more than 0 AND the user wants to keep playing
+while (totalscore>0) {
+    let totalscore = 30;
+    //create the two dice variables and set them to random values between 1 and 6
+let dice1 = Math.floor((Math.random() * 6) + 1);
+let dice2 = Math.floor((Math.random() * 6) + 1);
+    //print the values on the two dice
+console.log("You got");
+console.log(dice1,dice2);
+    //conditional statement: Win round
+if (dice1 = dice2){
+    let totalscore = totalscore+5
+}
+else{
+    let totalscore = totalscore-5
+
+}
+
+console.log(score)
+
+    //conditional statement - They lost the game and check if they want to play again.
+
+    //print out the option of quitting. The user will enter 'yes' to keep going and 'no' to stop.
+
+    //read users input
+
+    //If they want to play again
+
+    // Set score back to 30
+}
+    // End of Loop
+
+    //thank the user for playing
+
+</script>
+</body>
+</html>

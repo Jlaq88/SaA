@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fizz Buzz Trainer</title>
+</head>
+<body>
+<script>
+    "use strict";
+    // This program plays the game of Fizz-Buzz with the user until they make a mistake
+    // If the output is divisible by 5 it says 'Fizz'
+    // If the output is divisible by 7 it says 'Buzz'
+    // If the output is divisible by both 5 and 7 it says 'Fizz-Buzz'
+
+    // Set a variable 'isPlaying' to true
+    let isPlaying = true;
+    // Set a variable 'num' to the current number (1)
+    let num = 1;
+    // Loop while the user is playing
+    while(isPlaying) {
+        // Prompt the user for their guess
+        let guess = prompt("Next Value");
+        // Condition 1: Check if it is divisible by 5 and 7
+        if (num % 5 == 0 && num % 7 == 0) {
+            // If they didn't enter 'fizz buzz', isPlaying is false
+            if (guess.toLowerCase() != "fizz buzz") {
+                isPlaying = false;
+            }
+            // Condition 2: Check if it is divisible by 5
+        } else if (num % 5 == 0) {
+            // If they didn't enter 'fizz', isPlaying is false
+            if (guess.toLowerCase() != "fizz") {
+                isPlaying = false;
+            }
+            // Condition 3: Check if it is divisible by 7
+        } else if (num % 7 == 0) {
+            // If they didn't enter 'buzz', isPlaying is false
+            if (guess.toLowerCase() != "buzz") {
+                isPlaying = false;
+            }
+            // Otherwise
+        } else {
+            // If they didn't enter the correct number, isPlaying is false
+            guess = Number(guess);
+            if (guess != num) {
+                isPlaying = false;
+            }
+        }
+
+        // Increment num
+        num = num + 1
+    }
+    // *** CHALLENGE: Handle the extra cases where if the number contains a 5 or a 7 it should be fizz, buzz or fizz-buzz
+</script>
+</body>
+</html>

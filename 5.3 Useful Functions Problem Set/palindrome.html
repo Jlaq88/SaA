@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Palindrome Problem</title>
+</head>
+<body>
+<script>
+    "use strict";
+    /* Write a function that recognizes palindromes. The function takes a string as a parameter and
+    returns true if the string is a palindrome and false if it is not
+    0 1 2 3
+    A T B A
+
+     */
+    // Define the function isPalindrome
+    function isPalidrome(word) {
+        let start = 0;
+        let end = word.length - 1;
+        while(start < end) {
+            if(word[start] !== word[end]) {
+                return false;       // Stops the function
+            }
+            start = start + 1;
+            end = end - 1;
+        }
+
+        return true;
+    }
+    // Get the word from the user
+    let text = prompt("Enter a word");
+    // Output the result
+    if(isPalindrome(text)) {
+        document.write(`${text} is a palindrome.`);
+    } else {
+        document.write(`${text} is NOT a palindrome`);
+    }
+</script>
+</body>
+</html>

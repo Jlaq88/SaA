@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>Prime Problem</title>
+</head>
+<body>
+<script>
+    "use strict";
+    /*
+        You will create a function that will check if a given number is prime or not.  It will return true if it is prime
+        and it will return false otherwise.
+
+         */
+    let  nbr=prompt('tell me a number');
+    nbr=Number(nbr);
+    function prime(nbr){
+        if(nbr>7){
+            if(nbr%2===0||nbr%3===0||nbr%7===0||nbr%5===0){
+                document.write('false');}
+            else{
+                document.write('true')
+            }}
+        else if(nbr<=7){
+            if(nbr===4||nbr===6) {
+                document.write('false');
+            }
+            else{
+                document.write('true');
+            }}
+
+    }
+    prime(nbr);
+</script>
+</body>
+</html>

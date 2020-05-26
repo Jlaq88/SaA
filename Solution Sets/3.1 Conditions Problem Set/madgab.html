@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mad Gab Game</title>
+    <script>
+        // You're not suppose to see this
+        "use strict";
+        let phraseOne = "Eye Pillow Fizz Sigh";
+        let answerOne = "apple of his eye";
+        let phraseTwo = "Of Lions Quarrel";
+        let answerTwo = "a flying squirrel";
+        let phraseThree = "Dawned Rink Hand Arrive";
+        let answerThree = "don't drink and drive";
+    </script>
+</head>
+<body>
+<script>
+    /* You will make a program that simulates MadGab.  I have hidden three phrases (phraseOne, phraseTwo, phraseThree) and
+    their answers (answerOne, answerTwo, answerThree).
+
+    Create a program that prompts the user with the phrase (use the given variable). Compare their response with the answer
+    (using the answer variable).  Using an if-statement let them know if they got each one.
+
+    Use a counter variable to keep track of how many they got correct. Write the number of correct answers to the web page.
+     */
+    let counter = 0;
+    let guessOne = prompt(phraseOne);
+    if(guessOne === answerOne) {
+        document.write("You got it!<br/>");
+        counter++;
+    } else {
+        document.write("miss! <br/>");
+    }
+
+    let guessTwo = prompt(phraseTwo);
+    if(guessTwo === answerTwo) {
+        document.write("You got it!<br/>");
+        counter++;
+    } else {
+        document.write("miss! <br/>");
+    }
+
+    let guessThree = prompt(phraseThree);
+    if(guessThree === answerThree) {
+        document.write("You got it!<br/>");
+        counter++;
+    } else {
+        document.write("miss! <br/>");
+    }
+
+    if(counter === 3) {
+        document.write("You Win!");
+    } else {
+        document.write(`You Lose. You only got ${counter}`);
+    }
+</script>
+</body>
+</html>

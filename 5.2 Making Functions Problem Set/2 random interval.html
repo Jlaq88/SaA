@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>Random Interval</title>
+</head>
+<body>
+<script>
+    "use strict";
+    /*
+         */let lowValue= prompt('tell me a number');
+    lowValue= Number(lowValue);
+
+    let highValue= prompt('tell me a higher number');
+    highValue= Number(highValue);
+
+
+
+    function getRandomFrom(){
+        let randomNum=Math.floor(Math.random()*highValue)+lowValue;
+        document.write(randomNum)
+    }
+    getRandomFrom()
+</script>
+</body>

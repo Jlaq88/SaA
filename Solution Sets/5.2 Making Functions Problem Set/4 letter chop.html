@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Letter Chop Problem</title>
+</head>
+<body>
+<script>
+    "use strict";
+    /* Write a function that removes all occurrences of a given letter from a string.
+    The first parameter should be the letter and the second parameter the string.
+    It will print the new string to the web page on a single line.
+
+    1. scan through the text/string
+    2. Match characters
+    3. Get input from the user
+    4. Output the result to the webpage
+    5. Create a function
+     */
+
+    // Define the function
+    /*
+    function crop(letter, text) {
+        let i = 0;
+        while(i < text.length) {
+            if(text[i] != letter) {
+                document.write(text[i]);
+            }
+            i++;
+        }
+    }*/
+
+    function cropLetter(letter, text) {
+        let i = 0;
+        while(i < text.length) {
+            //document.write(text[i]);
+            if(letter !== text[i]) {
+                document.write(text[i]);
+            }
+            i = i + 1;
+        }
+    }
+    // Get the sentence and the letter from the user
+    let sentence = prompt("Please some text");
+    let aLetter = prompt("Please enter the letter you want to remove");
+    // Call the function
+    cropLetter(aLetter, sentence);
+
+    //crop("t", "kitten");
+</script>
+</body>
+</html>

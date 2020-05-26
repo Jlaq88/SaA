@@ -1,0 +1,135 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>velha</title>
+    <style type="text/css">
+        .tictactoe {
+            --size: 80px;
+            --border-size: 5px;
+            --border-color: black;
+            --cell-color: white;
+            --player-x-color: black;
+            --player-o-color: black;
+            --victory-color: red;
+
+            display: inline-grid;
+            grid-gap: var(--border-size);
+            grid-template-columns: repeat(3, var(--size));
+            grid-template-rows: repeat(3, var(--size));
+
+            background-color: var(--border-color);
+        }
+        .tictactoe .cell {
+            position: relative;
+            background-color: var(--cell-color);
+        }
+        .tictactoe .cell.x::before,
+        .tictactoe .cell.x::after,
+        .tictactoe .cell.o::before,
+        .tictactoe .cell.o::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transform-origin: 1% 3%;
+        }
+        .tictactoe .cell.x::before,
+        .tictactoe .cell.x::after {
+            width: 100%;
+            height: var(--border-size);
+            border-radius: calc(var(--border-size) / 2);
+            background-color: var(--player-x-color);
+        }
+        .tictactoe .cell.x::before {
+            transform: rotate(45deg) translate(-50%, -50%);
+        }
+        .tictactoe .cell.x::after {
+            transform: rotate(-45deg) translate(-50%, -50%);
+        }
+        .tictactoe .cell.o::after {
+            --circle-size: calc(100% - 2 * var(--border-size));
+            width: calc(var(--circle-size) - 18%);
+            height: calc(var(--circle-size) - 18%);
+            border: solid var(--border-size) var(--player-o-color);
+            border-radius: 100%;
+        }
+
+        /**
+         * horizontal
+         */
+        .tictactoe.h1 #l1c1,
+        .tictactoe.h1 #l1c2,
+        .tictactoe.h1 #l1c3 {
+            --player-x-color: var(--victory-color);
+            --player-o-color: var(--victory-color);
+        }
+        .tictactoe.h2 #l2c1,
+        .tictactoe.h2 #l2c2,
+        .tictactoe.h2 #l2c3 {
+            --player-x-color: var(--victory-color);
+            --player-o-color: var(--victory-color);
+        }
+        .tictactoe.h3 #l3c1,
+        .tictactoe.h3 #l3c2,
+        .tictactoe.h3 #l3c3 {
+            --player-x-color: var(--victory-color);
+            --player-o-color: var(--victory-color);
+        }
+
+        /**
+         * vertical
+         */
+        .tictactoe.v1 #l1c1,
+        .tictactoe.v1 #l2c1,
+        .tictactoe.v1 #l3c1 {
+            --player-x-color: var(--victory-color);
+            --player-o-color: var(--victory-color);
+        }
+        .tictactoe.v2 #l1c2,
+        .tictactoe.v2 #l2c2,
+        .tictactoe.v2 #l3c2 {
+            --player-x-color: var(--victory-color);
+            --player-o-color: var(--victory-color);
+        }
+        .tictactoe.v3 #l1c3,
+        .tictactoe.v3 #l2c3,
+        .tictactoe.v3 #l3c3 {
+            --player-x-color: var(--victory-color);
+            --player-o-color: var(--victory-color);
+        }
+
+        /**
+         * diagonal
+         */
+        .tictactoe.d-left #l1c1,
+        .tictactoe.d-left #l2c2,
+        .tictactoe.d-left #l3c3 {
+            --player-x-color: var(--victory-color);
+            --player-o-color: var(--victory-color);
+        }
+        .tictactoe.d-right #l1c3,
+        .tictactoe.d-right #l2c2,
+        .tictactoe.d-right #l3c1 {
+            --player-x-color: var(--victory-color);
+            --player-o-color: var(--victory-color);
+        }
+    </style>
+</head>
+<body>
+<div class="tictactoe d-right">
+    <div id="l1c1" class="cell o"></div>
+    <div id="l1c2" class="cell o"></div>
+    <div id="l1c3" class="cell x"></div>
+
+    <div id="l2c1" class="cell o"></div>
+    <div id="l2c2" class="cell x"></div>
+    <div id="l2c3" class="cell o"></div>
+
+    <div id="l3c1" class="cell x"></div>
+    <div id="l3c2" class="cell o"></div>
+    <div id="l3c3" class="cell x"></div>
+</div>
+</body>
+</html>

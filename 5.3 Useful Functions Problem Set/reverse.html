@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reverse a String</title>
+</head>
+<body>
+<script>
+    "use strict";
+    /* Write a function that takes a string as a parameter and returns the reversed string.
+    * 1. Loop through the text
+    * 2. Loop backwards
+    * 3. Get all characters into one string
+    * 4. Define function
+    * */
+
+
+    // Define the function 'reverse' that has a parameter 'text' and returns a string
+    function reverse(text) {
+        let i = text.length - 1;    // Last character of the text
+        let reversedString = "";
+        while(i >= 0) {
+            reversedString = reversedString + text[i];
+            i--;        // i = i - 1
+        }
+        document.write(reversedString);
+    }
+
+    // Get the text from the user
+
+    // Call the reverse function and store it in the variable 'result'
+    reverse("cloudy");
+    // Print out the result
+
+</script>
+</body>
+</html>

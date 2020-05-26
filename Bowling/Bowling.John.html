@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bowling Simulator</title>
+<style>
+    body {
+        font-family: "Arial Black";
+        cursor: url("../cursor.png") 18 18, auto;
+    }
+
+
+</style>
+</head>
+<body>
+<script>
+    "use strict";
+    let name = prompt("What is your name");
+    let counter = 1;
+    let round = 1;
+    while (counter<=10) {
+        document.write("Round",round,"&nbsp;&nbsp;");
+
+        let frame = prompt("What is your score");
+        if (frame>10)
+            document.write("impossible score no points");
+            document.write("<br>");
+        if (frame === 10){
+            document.write("Strike 10 Points");
+            document.write("<br>");
+            counter = counter + 1;
+            round = round + 1
+        }
+        else {
+
+            let frame2 = prompt("What is your score");
+
+            let value = Number(frame);
+            let value2 = Number(frame2);
+
+            let score = (value + value2);
+            document.writeln(name,"&nbsp;", score);
+            document.write("<br>");
+            counter = counter + 1;
+            round = round + 1;
+
+        }
+
+
+    }
+
+
+        document.write(finalscore);
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

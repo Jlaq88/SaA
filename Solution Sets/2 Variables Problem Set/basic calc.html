@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+    /* This program will take in three numbers from the user and multiply them */
+
+    // Ask the user for three decimal numbers and store the results in variables 'a', 'b' and 'c'
+    let a = prompt("Enter in the first value:");
+    let b = prompt("Enter in the second value:");
+    let c = prompt("Enter in the third value:");
+    // Convert a to a Number and store it back in a
+    a = Number(a);
+    // Convert b to a Number and store it back in b
+    b = Number(b);
+    // Convert c to a Number and store it back in c
+    c = Number(c);
+    // Calculate the product of all three numbers and store it in a new variable called 'answer'
+    let answer = a * b * c;
+
+    // Print to the web page '{a} * {b} * {c} = {answer}'
+    document.write(`${a} * ${b} * ${c} = ${answer}`);
+</script>
+</body>
+</html>

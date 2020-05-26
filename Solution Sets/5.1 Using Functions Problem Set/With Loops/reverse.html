@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+    // Print out the user's input in reverse.
+
+    // Ask the user for a word or a sentence.  Store the result as 'message'.
+    let text = prompt("Please enter a word or sentence");
+    let reversedText = "";
+    // Loop through the characters in reverse.
+    let i = text.length - 1;
+    while(i >= 0) {
+        reversedText += text[i];
+        i--;
+    }
+    document.write(reversedText);
+    // Challenge: See if you can create one string that is the 'message' in reverse
+    //            instead of printing each character on a separate line.
+</script>
+</body>
+</html>

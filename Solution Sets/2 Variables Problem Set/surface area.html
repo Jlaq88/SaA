@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        /* This program finds the surface area of a box given the length, width and height */
+
+        // Ask for the length of the box (in cm) and store it as a 2 decimal point Number in 'length'
+        let length = prompt("Length of the box (in cm)");
+        length = Number(length);
+        // Ask for the width of the box (in cm) and store it as a 2 decimal point Number in 'width'
+        let width = prompt("Width of the box (in cm)");
+        width = Number(width);
+        // Ask for the height of the box (in cm) and store it as a 2 decimal point Number in 'height'
+        let height = prompt("Heigth of the box (in cm)");
+        height = Number(height);
+        // Calculate the surface area of the box and store the result in surfaceArea
+        let surfaceArea = 2*(length*width + width*height + length*height);
+
+        // Print "The surface area of the box is [surfaceArea] squared cm."
+        document.write(`The surface area of the box is ${surfaceArea} squared cm.`);
+    </script>
+</body>
+</html>

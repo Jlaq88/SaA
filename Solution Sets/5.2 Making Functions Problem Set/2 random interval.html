@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Interval</title>
+</head>
+<body>
+<script>
+    "use strict";
+    /*
+    This program will create a new random function that prints an integer between two values.
+     */
+
+    // Define the function 'getRandomFrom(low, high)' that will take in two integers.  It will print out a random value
+    // between the lowest and highest (inclusive).  It will print the random number to the webpage using document.write()
+    function getRandomFrom(low, high) {
+        let range = high - low + 1;
+        document.write(Math.floor(Math.random()*range) + low);
+    }
+    // Ask the user for the two values and store them in 'lowValue' and 'highValue'
+    let lowValue = prompt("Give the lower bound");
+    let highValue = prompt("Give the upper bound");
+    lowValue = Number(lowValue);        // Convert the string to a number
+    highValue = Number(highValue);
+    // Call getRandomFrom using lowValue and highValue as arguments.
+    document.write("Your random number is ");
+    document.write(range);
+    getRandomFrom(lowValue, highValue);
+
+</script>
+</body>
+</html>
